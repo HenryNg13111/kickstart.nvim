@@ -159,6 +159,10 @@ vim.opt.scrolloff = 10
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- OWN KEYBINDS
+
+vim.keymap.set('n', '<leader>fe', ':Ex<CR>', { desc = 'Open [F]ile [E]xplorer' })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -659,10 +663,11 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         clangd = {},
-        ast_grep = {},
         emmet_ls = {},
         eslint = {},
         prettier = {},
+        cssls = {},
+        html = {},
         tailwindcss = {},
         -- gopls = {},
         -- pyright = {},
